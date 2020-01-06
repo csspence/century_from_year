@@ -11,3 +11,18 @@ centuryFromYear(1900)  returns (19)
 centuryFromYear(1601)  returns (17)
 centuryFromYear(2000)  returns (20)
 */
+
+const centuryFromYear = (year) => {
+    var century = year.toString();
+    let answer = century.slice(0, century.length - 2);
+
+    if(101 > year) {
+        return 1;
+    }
+    if(year % 100 === 0) {
+        return parseInt(answer);
+    }
+    answer = parseInt(answer) + 1;
+    return answer;
+  }
+
